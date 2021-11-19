@@ -20,3 +20,12 @@ export async function getPokemonDetailsByURL(url) {
         throw err;
     }
 }
+
+export async function getPokemonDetailsAPI(id) {
+    try {
+        const response = await fetch(`${Config.API_URL}/pokemon/${id}`);
+        return await response.json();
+    } catch(err) {
+        throw err;
+    }
+}

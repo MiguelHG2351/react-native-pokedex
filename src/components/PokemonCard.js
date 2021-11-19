@@ -2,10 +2,13 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableWithoutFeedback } from 'react-native'
 import getColorPokemon from '../utils/getColorPokemon'
 import { capitalize } from 'lodash'
+import { useNavigation } from '@react-navigation/native'
 
 export function PokemonCard({ pokemon }) {
+    const navigation = useNavigation()
+
     const goTo = () => {
-        console.log(`go to ${pokemon.image}`)
+        navigation.navigate('Pokemon', { id: pokemon.id })
     }
 
     const pokemonColor = getColorPokemon(pokemon.type)

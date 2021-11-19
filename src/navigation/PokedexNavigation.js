@@ -10,7 +10,11 @@ export default function FavoriteNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Pokedex" component={Pokedex} />
-      <Stack.Screen name="Pokemon" component={Pokemon} />
+      <Stack.Screen
+        name="Pokemon"
+        component={Pokemon}
+        options={{title: '', headerTransparent: true, headerShadowVisible: false}}
+      />
     </Stack.Navigator>
   );
 }

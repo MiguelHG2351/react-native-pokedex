@@ -6,7 +6,6 @@ import { PokemonCard } from './PokemonCard'
 export function PokemonList(props) {
     const { pokemons, loadPokemons } = props
     const loadMore = () => {
-        console.log('load more')
         loadPokemons()
     }
 
